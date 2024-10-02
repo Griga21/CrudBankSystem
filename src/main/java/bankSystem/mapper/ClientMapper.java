@@ -1,7 +1,13 @@
 package bankSystem.mapper;
 
-import bankSystem.DTO.ClientDTO;
+import bankSystem.DTO.ClientDto;
+import bankSystem.models.Client;
 
 public class ClientMapper {
-    public static ClientDTO
+    public static ClientDto mapToClientDto(Client client){
+        return new ClientDto(client.getId(), client.getName());
+    }
+    public static Client mapToClient(ClientDto clientDto){
+        return new Client(clientDto.getId(), clientDto.getName());
+    }
 }
