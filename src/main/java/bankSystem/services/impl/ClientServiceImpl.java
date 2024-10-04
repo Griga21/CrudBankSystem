@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class ClientServiceImpl implements ClientService {
-    private ClientRepository clientRepository;
+    private final ClientRepository clientRepository;
 
     @Override
     public ClientDto createClient(ClientDto clientDto) {
@@ -25,9 +25,9 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientDto getClientById(Long idClient) {
-        Client client = clientRepository.findById(idClient).orElseThrow(
-                () -> new ResourceNotFound("Client is not exists with a given id: " + idClient)
+    public ClientDto getClientById(Long clientId) {
+        Client client = clientRepository.findById(clientId).orElseThrow(
+                () -> new ResourceNotFound("Client is not exists with a given id: " + clientId)
         );
         return ClientMapper.mapToClientDto(client);
     }
@@ -39,9 +39,9 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientDto updateClient(Long idClient, ClientDto updateClientDto) {
-        Client client = clientRepository.findById(idClient).orElseThrow(
-                () -> new ResourceNotFound("Client is not exists with a given id: " + idClient)
+    public ClientDto updateClient(Long clientId, ClientDto updateClientDto) {
+        Client client = clientRepository.findById(clientId).orElseThrow(
+                () -> new ResourceNotFound("Client is not exists with a given id: " + clientId)
         );
         client.setName(updateClientDto.getName());
         Client savedClient = clientRepository.save(client);
@@ -49,10 +49,10 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public void deleteClient(Long idClient) {
-        clientRepository.findById(idClient).orElseThrow(
-                () -> new ResourceNotFound("Client is not exists with a given id: " + idClient)
+    public void deleteClient(Long clientId) {
+        clientRepository.findById(clientId).orElseThrow(
+                () -> new ResourceNotFound("Client is not exists with a given id: " + clientId)
         );
-        clientRepository.deleteById(idClient);
+        clientRepository.deleteById(clientId);
     }
 }

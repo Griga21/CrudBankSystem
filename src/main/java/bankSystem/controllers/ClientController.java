@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/client")
 @RequiredArgsConstructor
-public class ClientControllers {
+public class ClientController {
     private final ClientServiceImpl clientService;
 
     @PostMapping("/create")
