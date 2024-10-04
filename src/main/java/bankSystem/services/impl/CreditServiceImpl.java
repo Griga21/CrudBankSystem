@@ -7,10 +7,12 @@ import bankSystem.models.Credit;
 import bankSystem.repositories.CreditRepository;
 import bankSystem.services.CreditService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 @AllArgsConstructor
 public class CreditServiceImpl implements CreditService {
     private CreditRepository creditRepository;

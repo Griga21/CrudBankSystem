@@ -1,6 +1,8 @@
 package bankSystem.controllers;
 
 import bankSystem.DTO.ClientDto;
+import bankSystem.models.Client;
+import bankSystem.models.Credit;
 import bankSystem.services.impl.ClientServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
