@@ -1,8 +1,6 @@
 package bankSystem.controllers;
 
 import bankSystem.DTO.ClientDto;
-import bankSystem.models.Client;
-import bankSystem.models.Credit;
 import bankSystem.services.impl.ClientServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -34,4 +32,10 @@ public class ClientController {
         List<ClientDto> clients = clientService.getAllClient();
         return ResponseEntity.ok(clients);
     }
+
+    @DeleteMapping("/delete{id}")
+    public void deleteClient(@RequestParam(name = "id") Long id) {
+        clientService.deleteClient(id);
+    }
 }
+

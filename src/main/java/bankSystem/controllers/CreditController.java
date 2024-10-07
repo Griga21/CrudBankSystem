@@ -33,4 +33,9 @@ public class CreditController {
         List<CreditDto> creditDtos = creditService.getAllCredit();
         return ResponseEntity.ok(creditDtos);
     }
+
+    @DeleteMapping("/delete{id}")
+    public void deleteCredit(@RequestParam(name = "id") Long id) {
+        creditService.deleteCredit(id)  ;
+    }
 }
