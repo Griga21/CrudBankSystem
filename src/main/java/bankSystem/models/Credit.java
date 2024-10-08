@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Data
@@ -21,4 +22,10 @@ public class Credit {
     private double total;
     @Column(name = "bet")
     private double bet;
+    @Column(name = "remains")
+    private double remains;
+    @Column(name = "start_data")
+    private Date startData;
+    @Column(name = "end_data")
+    private Date endData;
 }
