@@ -17,8 +17,8 @@ public class Credit {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long creditId;
     @Column(name = "client_id")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    @JoinColumn(name = "id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "client_id", referencedColumnName = "id ")
     private Client client;
     @Column(name = "total")
     private double total;
