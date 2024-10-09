@@ -10,11 +10,12 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long idPayment;
 
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    @Column(name = "client_id")
-    private Long clientId;
-    @Column(name = "credit_id")
-    private Long creditId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
+    private Client client;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "credit_id", referencedColumnName = "creditId")
+    private Credit credit;
     @Column(name = "amount")
     private double amount;
     @Column(name = "data")
