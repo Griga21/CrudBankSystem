@@ -1,4 +1,4 @@
-package scr.models;
+package scr.entities;
 
 import lombok.Data;
 
@@ -17,10 +17,12 @@ public class Payment {
     private Timestamp payData;
     @Column
     private Double amountPayment;
+    @Column
+    private String currency;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client;
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "credit_id", referencedColumnName = "creditId")
+    @JoinColumn(name = "credit_id")
     private Credit credit;
 }

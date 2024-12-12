@@ -1,4 +1,4 @@
 package scr.exceptions;
 
-public class CreditNotFound {
+public class CreditNotFound extends Exception{
 }

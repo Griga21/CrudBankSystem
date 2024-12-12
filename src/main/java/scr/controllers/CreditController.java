@@ -2,7 +2,7 @@ package scr.controllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import scr.models.Credit;
+import scr.entities.Credit;
 import scr.service.CreditService;
 
 import java.util.List;

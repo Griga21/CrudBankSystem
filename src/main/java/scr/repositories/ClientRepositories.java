@@ -1,6 +1,6 @@
 package scr.repositories;
 
-import scr.models.Client;
+import scr.entities.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,16 +1,20 @@
 package scr.service;
 
-import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import scr.models.Credit;
+import scr.entities.Credit;
 import scr.repositories.CreditRepositories;
 
 import java.util.List;
 
 @Service
-@AllArgsConstructor
 public class CreditService {
-    private CreditRepositories creditRepositories;
+    private final CreditRepositories creditRepositories;
+
+    @Autowired
+    public CreditService(CreditRepositories creditRepositories) {
+        this.creditRepositories = creditRepositories;
+    }
 
     public void addCredit(Credit credit) {
         creditRepositories.save(credit);

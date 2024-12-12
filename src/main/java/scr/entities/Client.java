@@ -1,4 +1,4 @@
-package scr.models;
+package scr.entities;
 
 import lombok.Data;
 

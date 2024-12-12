@@ -2,7 +2,7 @@ package scr.controllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import scr.models.Client;
+import scr.entities.Client;
 import scr.service.ClientService;
 
 import java.util.List;
