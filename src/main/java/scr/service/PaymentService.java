@@ -31,11 +31,11 @@ public class PaymentService {
         return paymentRepositories.findById(id).get();
     }
 
-    public List<Payment> getAllPayments(){
+    public List<Payment> getAllPayments() {
         return paymentRepositories.findAll();
     }
 
-    public void deletePaymentById(Long id){
+    public void deletePaymentById(Long id) {
         paymentRepositories.deleteById(id);
     }
 
