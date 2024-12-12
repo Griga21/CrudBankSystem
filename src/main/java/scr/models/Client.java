@@ -13,5 +13,4 @@ public class Client {
     private Long id;
     @Column(name = "name")
     String name;
-
 }

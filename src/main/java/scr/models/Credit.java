@@ -10,8 +10,9 @@ import java.sql.Timestamp;
 @Data
 public class Credit {
     @Id
+    @Column(name = "credit_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long creditId;
     @Column(name = "start_data")
     private Timestamp startData;
     @Column(name = "end_data")
@@ -22,4 +23,5 @@ public class Credit {
     private Double bet;
     @Column
     private Double amount;
+
 }
