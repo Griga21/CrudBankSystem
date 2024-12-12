@@ -1,21 +1,17 @@
 package scr.controllers;
 
-import scr.models.Client;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import scr.models.Client;
 import scr.service.ClientService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping(value = "/client")
+@AllArgsConstructor
 public class ClientController {
     private final ClientService clientService;
-
-    @Autowired
-    public ClientController(ClientService clientService) {
-        this.clientService = clientService;
-    }
 
     @PostMapping("/create")
     public Client createClient(@RequestBody Client client) {

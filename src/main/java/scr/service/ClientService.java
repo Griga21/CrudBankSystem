@@ -1,24 +1,20 @@
 package scr.service;
 
-import scr.models.Client;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import scr.models.Client;
 import scr.repositories.ClientRepositories;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class ClientService {
     private final ClientRepositories clientRepositories;
 
-    @Autowired
-    public ClientService(ClientRepositories clientRepositories) {
-        this.clientRepositories = clientRepositories;
-    }
 
-    public Client addClient(Client client) {
+    public void addClient(Client client) {
         clientRepositories.save(client);
-        return client;
     }
 
     public Client getClientById(Long id) {
