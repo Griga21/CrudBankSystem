@@ -1,4 +1,4 @@
-package exceptions;
+package scr.exceptions;
 
 public class ClientNotFound extends RuntimeException {
     public ClientNotFound() {

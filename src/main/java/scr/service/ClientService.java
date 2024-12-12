@@ -1,9 +1,9 @@
-package service;
+package scr.service;
 
-import models.Client;
+import scr.models.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.ClientRepositories;
+import scr.repositories.ClientRepositories;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package controllers;
+package scr.controllers;
 
-import models.Client;
+import scr.models.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.ClientService;
+import scr.service.ClientService;
 
 import java.util.List;
 

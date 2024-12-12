@@ -1,4 +1,4 @@
-package models;
+package scr.models;
 
 import javax.persistence.*;
 
